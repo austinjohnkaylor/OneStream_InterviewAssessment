@@ -7,6 +7,7 @@ A repository containing all the code related to an interview assessment for OneS
 - Artificial delays can be introduced to mimic a longer running operation in API2 and API3
 - Front-end Web API to support Get/Post verbs
 - Be prepared to discuss options to secure front-end API 
+![API System Diagram](image.png)
 ### 2. Code Analysis: Explain why the block below does not emit “bow-wow”
 ```
 class Animal
