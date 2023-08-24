@@ -27,7 +27,7 @@ class Animal
 ### 3. Code Analysis: Outline any issues/concerns with the implemented code
 ```
 class A
- {
+{
      public int a { get; set; }
      public int b { get; set; }
 }
@@ -35,7 +35,7 @@ class A
 class B
 {
     public const A a;  
-    public B()  { a.a = 10; }
+    public B()  { a.a = 10; } // A is set as a constant above, so it cannot be set in B's constructor
 }
 
 int main()
