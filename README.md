@@ -34,14 +34,14 @@ class A
 
 class B
 {
-    public const A a;  
-    public B()  { a.a = 10; } // A is set as a constant above, so it cannot be set in B's constructor
+    public const A a;  // A constant field in a class requires a value when being instantiated
+    public B()  { a.a = 10; } // A is set as a constant above, so it cannot be set in B's constructor | Trying to access A's field of a will result in a NullReferenceException because it wasn't initialized
 }
 
 int main()
 {
     B b = new B();
-    Console.WriteLine("%d %d\n", b.a.a, b.a.b);
+    Console.WriteLine("%d %d\n", b.a.a, b.a.b); // %d are for writing dates out to strings | b.a.b wasn't set in B's constructor, so it will return the default int value of 0
     return 0;
 }
 ```
