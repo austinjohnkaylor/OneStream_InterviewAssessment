@@ -1,6 +1,12 @@
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Server.HttpSys;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+// builder.Services.AddAuthentication(x => {
+//     x.DefaultAuthenticateScheme = 
+// }); --> watch this video for more info -> https://www.youtube.com/watch?v=mgeuh8k3I4g
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
