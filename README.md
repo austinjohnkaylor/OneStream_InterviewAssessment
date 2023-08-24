@@ -10,19 +10,24 @@ A repository containing all the code related to an interview assessment for OneS
 ### 2. Code Analysis: Explain why the block below does not emit “bow-wow”
 ```
 class Animal
- {
+{
     public virtual string speak(int x) { return "silence"; }
- }
+}
 
- class Cat : Animal
- {
-      public string speak(int x) { return "meow"; }
- }
+class Cat : Animal
+{
+    public string speak(int x) { return "meow"; } // should be overridden because it hides the inherited member of Animal's speak method
+}
 
- class Dog : Animal
- {
-      public string speak(short x) { return "bow-wow"; }
- }
+class Dog : Animal
+{
+    public string speak(short x) { return "bow-wow"; } // should be overridden because it hides the inherited member of Animal's speak method 
+                                                       // won't output "bow-wow" because the parent class's speak method wasn't overriden by the child class Dog
+                                                       // need to update the method signature from speak(short x) to speak(int x) in order to override Animal's speak method
+}
+
+Animal d = new Dog(); 
+Console.Write(d.speak(0)); 
 ```
 ### 3. Code Analysis: Outline any issues/concerns with the implemented code
 ```
