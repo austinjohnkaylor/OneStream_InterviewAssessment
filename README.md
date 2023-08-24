@@ -29,6 +29,7 @@ class Dog : Animal
 Animal d = new Dog(); 
 Console.Write(d.speak(0)); 
 ```
+> Answer: Dog's speak method should override Animal's speak method by adding the override keyword to the method signature. In addition, Dog's speak method should be changed from speak(short x) to speak(int x) in order to properly override Animal's speak method. The correct code is found in [Question2's](Question2/Dog.cs) Dog class.
 ### 3. Code Analysis: Outline any issues/concerns with the implemented code
 ```
 class A
@@ -50,3 +51,10 @@ int main()
     return 0;
 }
 ```
+> Answer: `public const A a;` in Class A is wront because a constant field in a class requires a value when being instantiated. 
+` public B()  { a.a = 10; }` is wrong because A is set as a constant above this line, so it cannot be set in B's constructor. Also, trying to access A's field of a will result in a NullReferenceException because it wasn't initialized.
+`Console.WriteLine("%d %d\n", b.a.a, b.a.b);` will output %d %d because those are used to interpolate dates into string values. Since b.a.a and b.a.b are used as parameters in Console.WriteLine, you can use {0} and {1} to grab those values and output them to the console.
+
+[Correct code for Class B](Question3/B.cs) 
+
+[Correct code for the Main method](Question3/Program.cs)
