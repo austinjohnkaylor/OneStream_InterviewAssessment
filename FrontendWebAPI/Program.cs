@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 //     x.DefaultAuthenticateScheme = 
 // }); --> watch this video for more info -> https://www.youtube.com/watch?v=mgeuh8k3I4g
 
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+//builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

@@ -3,7 +3,7 @@ public class Widget
     /// <summary>
     /// A GUID unique to the widget
     /// </summary>
-    public GUID Id { get; set; }
+    public GUID guid { get; set; }
     /// <summary>
     /// A name for the Widget
     /// </summary>
