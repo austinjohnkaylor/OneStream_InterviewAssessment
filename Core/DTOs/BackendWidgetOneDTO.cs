@@ -1,13 +1,25 @@
 public class BackendWidgetOneDTO
 {
-    public int A { get; set; }
-    public string B { get; set; }
+    public int Value { get; set; }
+    public string Name { get; set; }
 
-    public static BackendWidgetOneDTO MapFrom(BackendWidgetOne backendWidgetOne)
+    /// <summary>
+    /// Allows an implicit cast of a BackendWidgetOne object to a BackendWidgetOneDTO object
+    /// </summary>
+    /// <param name="backendWidgetOne"></param>
+    public static implicit operator BackendWidgetOneDTO(BackendWidgetOne backendWidgetOne)
     {
         return new BackendWidgetOneDTO {
-            A = backendWidgetOne.Value,
-            B = backendWidgetOne.Name
+            Value = backendWidgetOne.Value,
+            Name = backendWidgetOne.Name
         };
     }
+
+    // public static BackendWidgetOneDTO MapFrom(BackendWidgetOne backendWidgetOne)
+    // {
+    //     return new BackendWidgetOneDTO {
+    //         Value = backendWidgetOne.Value,
+    //         Name = backendWidgetOne.Name
+    //     };
+    // }
 }

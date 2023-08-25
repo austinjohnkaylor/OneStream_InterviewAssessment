@@ -14,5 +14,15 @@ public class BackendWidgetOneController : ControllerBase
         
     }
 
-    [HttpPost()]
+    [HttpPost]
+    public async Task<ActionResult> CreateWidget([FromBody] BackendWidgetOneDTO backendWidgetOneDTO)
+    {
+        return CreatedAtAction()
+    }
+
+    [HttpPut({id})]
+    public async Task<ActionResult> UpdateWidget(GUID id)
+    {
+
+    }
 }
