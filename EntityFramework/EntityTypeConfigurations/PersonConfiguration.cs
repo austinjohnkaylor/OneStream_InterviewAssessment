@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace EntityFramework.EntityTypeConfigurations;
 
-public class PersonEntityTypeConfiguration : IEntityTypeConfiguration<Person>
+public class PersonConfiguration : IEntityTypeConfiguration<Person>
 {
     public void Configure(EntityTypeBuilder<Person> builder)
     {
