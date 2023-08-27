@@ -18,12 +18,14 @@ public class PersonConfiguration : IEntityTypeConfiguration<Person>
         
         builder.HasData(new Person
         {
+            Id = Guid.NewGuid(),
             FirstName = "John",
             MiddleName = "Cookie",
             LastName = "Doe",
             Age = 30
         }, new Person
         {
+            Id = Guid.NewGuid(),
             FirstName = "Jane",
             MiddleName = "Cookie",
             LastName = "Doe",

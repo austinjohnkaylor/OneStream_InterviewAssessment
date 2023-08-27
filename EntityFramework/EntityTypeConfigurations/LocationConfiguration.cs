@@ -19,6 +19,7 @@ public class LocationConfiguration : IEntityTypeConfiguration<Location>
 
         builder.HasData(new Location
         {
+            Id = Guid.NewGuid(),
             Address1 = "555 Happy Place Drive",
             Address2 = string.Empty,
             City = "Happyville",
@@ -26,6 +27,7 @@ public class LocationConfiguration : IEntityTypeConfiguration<Location>
             ZipCode = 55555
         }, new Location
         {
+            Id = Guid.NewGuid(),
             Address1 = "123 Sycamore Tree Lane",
             Address2 = string.Empty,
             City = "Treehill",
@@ -33,6 +35,7 @@ public class LocationConfiguration : IEntityTypeConfiguration<Location>
             ZipCode = 99999
         }, new Location
         {
+            Id = Guid.NewGuid(),
             Address1 = "456 Broken Sticks Avenue",
             Address2 = string.Empty,
             City = "Woods",
