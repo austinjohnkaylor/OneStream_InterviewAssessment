@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<MainDbContext>(options =>
 { 
-    options.UseInMemoryDatabase("MainDatabase"); // Provide a unique name
+    options.UseInMemoryDatabase("MainDatabase");
 });
 builder.Services.AddScoped<IPersonRepository, PersonRepository>();
 builder.Services.AddScoped<IPersonService, PersonService>();

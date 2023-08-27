@@ -23,6 +23,21 @@ public class PeopleController : ControllerBase
         return Ok(people);
     }
     
+    // GET: api/people/{id}
+    [HttpGet("{id}")]
+    public IActionResult GetById(Guid id)
+    {
+        // Assuming you have a service or repository to fetch data by ID
+    var person = _personService.GetPersonById(id);
+
+    if (person == null)
+    {
+        return NotFound(); // Return a Not Found result if the person with the given ID doesn't exist
+    }
+
+    return Ok(person);
+    }
+    
     // POST: api/people
     [HttpPost]
     public async Task<IActionResult> Post([FromBody] PersonDTO person)

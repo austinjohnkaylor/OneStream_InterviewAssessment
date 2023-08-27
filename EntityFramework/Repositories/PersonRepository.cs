@@ -1,3 +1,4 @@
+using Core.DTOs;
 using Core.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,6 +11,7 @@ public class PersonRepository : IPersonRepository
     public PersonRepository(MainDbContext context)
     {
         _context = context;
+        _context.Database.EnsureCreated();
     }
 
     public async Task<IEnumerable<Person>> GetAllPeople()
@@ -21,6 +23,11 @@ public class PersonRepository : IPersonRepository
     {
         return await _context.People.FirstOrDefaultAsync(person =>
             person.FirstName == firstName && person.MiddleName == middleName && person.LastName == lastName);
+    }
+
+    public async Task<Person> GetPersonById(Guid id)
+    {
+        return await _context.People.FindAsync(id);
     }
 
     public async Task AddPerson(Person person)

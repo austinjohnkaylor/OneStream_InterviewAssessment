@@ -9,4 +9,5 @@ public interface IPersonService
     Task<PersonDTO> CreateNewPerson(PersonDTO newPerson);
     Task RemoveExistingPerson(PersonDTO existingPerson);
     Task<Person> GetPersonByFirstMiddleAndLastName(PersonDTO existingPersonDto);
+    Task<PersonDTO> GetPersonById(Guid id);
 }

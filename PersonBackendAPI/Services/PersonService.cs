@@ -44,4 +44,9 @@ public class PersonService : IPersonService
         Person person = existingPersonDto;
         return await _personRepository.GetPersonByFirstMiddleAndLastName(person.FirstName, person.MiddleName, person.LastName);
     }
+
+    public async Task<PersonDTO> GetPersonById(Guid id)
+    {
+        return await _personRepository.GetPersonById(id);
+    }
 }
