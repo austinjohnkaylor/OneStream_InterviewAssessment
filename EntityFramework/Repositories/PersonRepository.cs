@@ -17,6 +17,12 @@ public class PersonRepository : IPersonRepository
         return await _context.People.ToListAsync();
     }
 
+    public async Task<Person> GetPersonByFirstMiddleAndLastName(string firstName, string middleName, string lastName)
+    {
+        return await _context.People.FirstOrDefaultAsync(person =>
+            person.FirstName == firstName && person.MiddleName == middleName && person.LastName == lastName);
+    }
+
     public async Task AddPerson(Person person)
     {
         _context.People.Add(person);
