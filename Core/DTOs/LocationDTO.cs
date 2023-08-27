@@ -10,7 +10,7 @@ public class LocationDTO
     {
         LocationDTO locationDto = new()
         {   
-            FullAddress = location.Address1 + " ," + location.Address2 + " ," + location.City + " ," + location.State + " " + location.ZipCode
+            FullAddress = location.Address1 + ", " + location.Address2 + ", " + location.City + ", " + location.State + ", " + location.ZipCode
         };
         return locationDto;
     }

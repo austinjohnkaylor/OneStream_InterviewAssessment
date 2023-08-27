@@ -12,7 +12,7 @@ public class PersonDTO
         PersonDTO personDto = new()
         {
             Age = person.Age,
-            FullName = person.FirstName + " " + person.MiddleName + person.LastName
+            FullName = person.FirstName + " " + person.MiddleName + " " + person.LastName
         };
         return personDto;
     }
